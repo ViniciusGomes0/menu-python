@@ -5,3 +5,7 @@ def menu():
     print('2 - Se cadastrar')
     print('3 - Sair')
     print('-' * 30)
+
+
+
+

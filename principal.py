@@ -6,7 +6,7 @@ try:
     escolha = int(input('Digite um número inteiro: '))
 
 except:
-    print('Digite uma opção válida: ')
+    val = str(input(('Digite uma opção válida: ')))
     uteis.menu()
 
 if escolha == 1:
@@ -18,8 +18,20 @@ elif escolha == 2:
     cpf = int(input('Digite seu CPF, pode usar pontos: '))
     print(f'Prazer {name}, sua idade é {idade} e seu CPF é {cpf}')
 
+
 elif escolha == 3:
     print('Agradecemos seu contato até mais!')
+    volta = str(input('Deseja voltar? [S/N]')).strip().upper()[0]
+    if volta =='S':
+        uteis.menu()
+        try:
+            escolha = int(input('Digite um número inteiro: '))
+        except:
+            uteis.menu()
+            val = str(input(('Digite uma opção válida: ')))
+        else:
+            print('Certo te respeito, mas estamos aqui, qualquer coisa!')
+
 
 else:
     uteis.menu()
